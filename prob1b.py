@@ -18,6 +18,9 @@ print "L(n)= ", Ln
 Rn = Ln + (funct(b)-funct(a)) * deltan
 print "R(n)= ", Rn
 
+trapn = (Ln + Rn) / 2
+print "Trap(n)= ", trapn
+
 
 
 
