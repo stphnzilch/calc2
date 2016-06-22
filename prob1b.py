@@ -1,17 +1,23 @@
 import math
 def funct(x):
-    return x ** math.log(x)
-a = 1.00
-b = 3
-intg = 0.00
-n = 100.000
+    return x ** math.log(x)   #input function
+
+a = 1.00     #input lower side
+b = 3        #Input higher side
+n = 100.000  #input n
 deltan = (b-a)/n
 x = a
-
+fx = funct(x)
+intg = 0.00
 while x < b:
-   
-    fx = funct(x)
-    intg = intg + (deltan * fx)
-    x = x + deltan
-print "L(n)= ", intg
+    intg = intg + (deltan * funct(x))
+    x = x + deltan 
+Ln = intg
+print "L(n)= ", Ln
+
+Rn = Ln + (funct(b)-funct(a)) * deltan
+print "R(n)= ", Rn
+
+
+
 
