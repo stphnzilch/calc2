@@ -1,10 +1,15 @@
 import math
 def funct(x):
-    return x ** math.log(x)   #input function
+    return  x ** math.log(x)   #input function
 
-a = 1.00     #input lower side
-b = 3        #Input higher side
-n = 100.000  #input n
+a = 1     #input lower side
+b = 3       #Input higher side
+error = 0.01  #Input error Ln-Rn
+
+n = ((funct(b) - funct(a)) * (b - a)) / error
+print n
+
+#n = 100.000  #input n
 deltan = (b-a)/n
 x = a
 fx = funct(x)
@@ -28,4 +33,7 @@ while x < b:
     x = x + deltan
 Midn = intg
 print "Mid(n)= ", Midn
+
+Simpn = (2 * Midn + trapn)/3
+print "Simp(n)= ", Simpn
 
