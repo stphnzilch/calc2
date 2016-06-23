@@ -21,6 +21,11 @@ print "R(n)= ", Rn
 trapn = (Ln + Rn) / 2
 print "Trap(n)= ", trapn
 
-
-
+x= a + (deltan/2)
+intg = 0
+while x < b:
+    intg = intg + (deltan * funct(x))
+    x = x + deltan
+Midn = intg
+print "Mid(n)= ", Midn
 
